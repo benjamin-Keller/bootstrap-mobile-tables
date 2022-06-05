@@ -2,55 +2,68 @@
  Screen smaller than 760px and iPads.
  ============================================================== */
 
- @media only screen
- and (max-width: 760px), (min-device-width: 768px)
- and (max-device-width: 1024px)  {
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
 
- /* Force table to not be like tables anymore */
- table, thead, tbody, th, td, tr {
-     display: block;
- }
- table.text-center {
-     text-align: left !important;
- }
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
 
- /* Hide table headers (but not display: none;, for accessibility) */
- thead tr {
-     position: absolute;
-     top: -9999px;
-     left: -9999px;
- }
- .table > :not(:first-child) {
-     border-top: none;
- }
+    table.text-center {
+        text-align: left !important;
+    }
+    table caption {
+        width: max-content;
+    }
 
- tr:not(.bg-light-blue) {
-     border-bottom: 2px solid #3490dc;
- }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
 
- td {
-     /* Behave  like a "row" */
-     border: none;
-     border-bottom: 1px solid #eee;
-     position: relative;
-     padding-left: 50%;
-     padding-top: 1.5rem !important;
- }
+    .table> :not(:first-child) {
+        border-top: none;
+    }
 
- td:before {
-     /* Now like a table header */
-     position: absolute;
-     /* Top/left values mimic padding */
-     top: 0;
-     left: 6px;
-     width: 45%;
-     padding-right: 10px;
-     white-space: nowrap;
-     font-weight: bold;
-     color: #54667a;
- }
+    .table>:not(caption)>*>* {
+        border-color: var(--bs-table-border-color);
+    }
 
- [data-content]:before {
-     content: attr(data-content);
- }
+    tr:not(.bg-light-blue) {
+        border-bottom: 2px solid #3490dc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        padding-top: 1.5rem !important;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #54667a;
+    }
+
+    [data-content]:before {
+        content: attr(data-content);
+    }
 }
