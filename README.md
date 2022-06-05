@@ -9,3 +9,10 @@ Mobile responsiveness for Bootstrap 5 tables.
 - Download Bootstrap 5.
 - Copy ```Responsive-Table.css``` into your styles to your styles folder.
 - Add a link in your ```<head>```.
+
+## Features
+
+- Responsive tables
+- Table Captions
+- Multiple responsive layouts
+
