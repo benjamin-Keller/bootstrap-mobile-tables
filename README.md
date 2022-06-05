@@ -16,3 +16,7 @@ Mobile responsiveness for Bootstrap 5 tables.
 - Table Captions
 - Multiple responsive layouts
 
+
+## Demo
+
+See it in action with this [Demo](https://benjamin-keller.github.io/bootstrap-mobile-tables/)
