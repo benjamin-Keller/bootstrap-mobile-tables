@@ -22,6 +22,8 @@ Mobile responsiveness for Bootstrap 5 tables.
 - Responsive tables
 - Table Captions
 - Multiple responsive layouts
+- Striped tables
+- Easily editable CSS variables
 
 
 ## Demo
