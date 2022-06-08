@@ -1,3 +1,11 @@
+:root {
+    --tmr-bootstrap-border-color: #dee2e6;
+    --tmr-white: #eee;
+    --tmr-table-header: #54667a;
+    --tmr-row-divider-color: #3490dc;
+    --tmr-stripped-row-background-color: rgba(0, 0, 0, 0.05);
+}
+
 /*-- ==============================================================
  Screen smaller than 760px and iPads.
  ============================================================== */
@@ -38,18 +46,18 @@
     }
 
     .table-mobile-responsive>:not(caption)>*>* {
-        border-color: var(--bs-table-border-color);
+        border-color: var(--tmr-bootstrap-border-color);
     }
 
     .table-mobile-responsive tr:not(.bg-light-blue) {
-        border-bottom: 2px solid #3490dc;
+        border-bottom: 2px solid var(--tmr-row-divider-color);
     }
 
     /* Default layout */
     .table-mobile-responsive td {
         /* Behave  like a "row" */
         border: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--tmr-white);
         position: relative;
         padding-left: 50%;
         padding-top: 1.5rem !important;
@@ -65,7 +73,7 @@
         padding-right: 10px;
         white-space: nowrap;
         font-weight: bold;
-        color: #54667a;
+        color: var(--tmr-table-header);
     }
     
     /* Sided layout */
@@ -79,7 +87,7 @@
     .table-mobile-responsive.table-mobile-sided td {
           /* Behave  like a "row" */
         border: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--tmr-white);
         position: relative;
         padding-left: 50%;
         padding-top: 0px !important;
@@ -96,11 +104,16 @@
         padding-right: 10px;
         white-space: nowrap;
         font-weight: bold;
-        color: #54667a;
+        color: var(--tmr-table-header);
     }
 
     /* Styleless */
     .table-mobile-responsive.table-mobile-styleless tr:not(.bg-light-blue) {
         border-bottom: none !important;
+    }
+
+    /* Stripped rows */
+    .table-mobile-responsive.table-mobile-striped>tbody>tr:nth-of-type(odd)>* {
+        background-color: var(--tmr-stripped-row-background-color) !important;
     }
 }
