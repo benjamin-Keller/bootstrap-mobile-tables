@@ -4,7 +4,11 @@
 
 @media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
-
+    
+    [data-content]:before {
+        content: attr(data-content);
+    }
+    
     /* Force table to not be like tables anymore */
     table,
     thead,
@@ -72,7 +76,7 @@
     .table-mobile-sided>:not(caption)>*>* {
         border-color: var(--bs-table-border-color);
     }
-    .table-mobile-sided tbody tr td {
+    .table-mobile-sided td {
           /* Behave  like a "row" */
         border: none;
         border-bottom: 1px solid #eee;
@@ -82,7 +86,7 @@
         display: flex;
         justify-content: flex-end;
     }
-    .table-mobile-sided tbody tr td:before {
+    .table-mobile-sided td:before {
         /* Now like a table header */
         position: absolute;
         /* Top/left values mimic padding */
@@ -95,7 +99,8 @@
         color: #54667a;
     }
 
-    [data-content]:before {
-        content: attr(data-content);
+    /* Styleless */
+    .table-mobile-styleless tr:not(.bg-light-blue) {
+        border-bottom: none !important;
     }
 }
