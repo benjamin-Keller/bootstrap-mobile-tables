@@ -10,43 +10,43 @@
     }
     
     /* Force table to not be like tables anymore */
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
+    .table-mobile-responsive,
+    .table-mobile-responsive thead,
+    .table-mobile-responsive tbody,
+    .table-mobile-responsive th,
+    .table-mobile-responsive td,
+    .table-mobile-responsive tr {
         display: block;
     }
 
-    table.text-center {
+    .table-mobile-responsive.text-center {
         text-align: left !important;
     }
-    table caption {
+    .table-mobile-responsive caption {
         width: max-content;
     }
 
     /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr {
+    .table-mobile-responsive thead tr {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
 
-    .table> :not(:first-child) {
+    .table-mobile-responsive> :not(:first-child) {
         border-top: none;
     }
 
-    .table>:not(caption)>*>* {
+    .table-mobile-responsive>:not(caption)>*>* {
         border-color: var(--bs-table-border-color);
     }
 
-    tr:not(.bg-light-blue) {
+    .table-mobile-responsive tr:not(.bg-light-blue) {
         border-bottom: 2px solid #3490dc;
     }
 
     /* Default layout */
-    td {
+    .table-mobile-responsive td {
         /* Behave  like a "row" */
         border: none;
         border-bottom: 1px solid #eee;
@@ -55,7 +55,7 @@
         padding-top: 1.5rem !important;
     }
 
-    td:before {
+    .table-mobile-responsive td:before {
         /* Now like a table header */
         position: absolute;
         /* Top/left values mimic padding */
@@ -69,14 +69,14 @@
     }
     
     /* Sided layout */
-    .table-mobile-sided> :not(:first-child) {
+    .table-mobile-responsive.table-mobile-sided> :not(:first-child) {
         border-top: none;
     }
 
-    .table-mobile-sided>:not(caption)>*>* {
+    .table-mobile-responsive.table-mobile-sided>:not(caption)>*>* {
         border-color: var(--bs-table-border-color);
     }
-    .table-mobile-sided td {
+    .table-mobile-responsive.table-mobile-sided td {
           /* Behave  like a "row" */
         border: none;
         border-bottom: 1px solid #eee;
@@ -86,7 +86,7 @@
         display: flex;
         justify-content: flex-end;
     }
-    .table-mobile-sided td:before {
+    .table-mobile-responsive.table-mobile-sided td:before {
         /* Now like a table header */
         position: absolute;
         /* Top/left values mimic padding */
@@ -100,7 +100,7 @@
     }
 
     /* Styleless */
-    .table-mobile-styleless tr:not(.bg-light-blue) {
+    .table-mobile-responsive.table-mobile-styleless tr:not(.bg-light-blue) {
         border-bottom: none !important;
     }
 }
